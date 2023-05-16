@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <h1>Juros Simples</h1>
+  <h2>Insira seus dados para calcular juros Simples</h2>
+  <p> Insira seu valor inicial de capital:
+    <input class="form-control" type="number" [(ngModel)]="capital">
+  <p> Insira o valor da taxa de juros, em % ao mês:</p>
+  <input class="form-control" type="number" [(ngModel)]="taxa">
+  <p> Insira o tempo decorrido, em meses:
+    <input class="form-control" type="number" [(ngModel)]="tempo">
+
+  <table>
+    <tr *ngFor="let item of getMontanteJurosSimples(); index as x">
+      <td>{{capital}}</td>
+      <td>x</td>
+      <td>{{taxa * 0.1}}</td>
+      <td>x</td>
+      <td>{{x+1}}</td>
+      <td>=</td>
+      <td>{{capital + (taxa * 0.1) * (x+1)}}</td>
+    </tr>
+  </table>
+</div>
